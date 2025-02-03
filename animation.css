@@ -1,0 +1,104 @@
+/* @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+.card-animation::after, .card-animation::before{
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue);
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: solid 3s linear infinite;
+}
+.card-animation::before {
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+@keyframes solid {
+    from{
+        angle: 0deg;
+    }
+    to {
+        angle: 360deg;
+    }
+} */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+
+.card-animation::after, 
+.card-animation::before {
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 0%, #ffff00, #bfff00, #80ff00, #40ff00, #00ff00, #00ff40);
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: rotate-gradient 8s linear infinite;
+}
+
+.card-animation::before {
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+@keyframes rotate-gradient {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+
+
+.card-2::after, .card-2::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 0%, blue, red, green, purple, tomato, aqua);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 16px;
+    animation: solid 5s linear infinite;
+}
+.card-2::before {
+    filter: blur(5px);
+    opacity: .5;
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: true;
+}
+
+@keyframes solid {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+
+ 
