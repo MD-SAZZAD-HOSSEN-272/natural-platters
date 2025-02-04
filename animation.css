@@ -1,34 +1,28 @@
-/* @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: true;
+.banner-content {
+    animation: banner-animation 1s linear;
 }
-.card-animation::after, .card-animation::before{
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 70%, blue);
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    border-radius: 10px;
-    animation: solid 3s linear infinite;
-}
-.card-animation::before {
-    filter: blur(10px);
-    opacity: 0.5;
-}
-
-@keyframes solid {
-    from{
-        angle: 0deg;
+@keyframes banner-animation {
+    from {
+        transform: translateX(-700px);
     }
     to {
-        angle: 360deg;
+        transform: translateX(0px);
     }
-} */
+}
+
+.banner-img {
+    animation: banner-img-animation 1s linear;
+}
+@keyframes banner-img-animation {
+        from {
+            transform: translateY(400px);
+        }
+        to {
+            transform: translate(0px);
+        }
+}
+
+
 @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
@@ -71,7 +65,7 @@
     content: "";
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 0%, blue, red, green, purple, tomato, aqua);
+    background-image: conic-gradient(from var(--angle), transparent 0%, rgba(0, 0, 255, 0.048), rgba(255, 0, 0, 0.088), rgba(0, 128, 0, 0.076), rgba(128, 0, 128, 0.116), rgba(255, 99, 71, 0.162), rgba(0, 255, 255, 0.036));
     position: absolute;
     top: 50%;
     left: 50%;

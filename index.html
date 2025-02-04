@@ -15,9 +15,9 @@
     
 </head>
 <body>
-    <header class=" bg-[#c6c4c4]">
+    <header class=" bg-[#c6c4c4] relative">
         <!-- Navbar -->
-         <nav class="flex justify-between items-center pt-5 w-[90%] mx-auto">
+         <nav class="flex justify-between items-center pt-5 w-[90%] mx-auto fixed top-0 left-1/2 transform -translate-x-1/2 bg-[#c6c4c4] z-10">
             <div>
                 <img src="c2-assets/logo-header.png" alt="">
             </div>
@@ -45,15 +45,15 @@
          </nav>
 
          <!-- Hero -->
-          <div class="mt-20 w-[90%] mx-auto">
-            <div class="text-center">
+          <div class="mt-20 w-[90%] mx-auto ">
+            <div class="text-center banner-content">
                 <h1 class="font-semibold text-[56px]">Freshness <span class="text-[#179800]">You Can <br  class="hidden lg:flex">
                     Count</span> On, Prices You’ll Love!
                 </h1>
                 <p class="text-xl">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br class="hidden lg:flex"> staples, we’ve got you      covered every day!               
                 </p>    
             </div>
-            <div >
+            <div class="banner-img">
                 <img class="mx-auto" src="c2-assets/hero-vegetables.png" alt="">
             </div>
           </div>
@@ -227,11 +227,11 @@
      </main>
      <footer class="relative  lg:mt-80 mt-[30rem]">
         <section class="card-2 z-[5] m-5 w-[90%] mx-auto bg-[#efebe6] mt-10 rounded-2xl absolute transform -translate-x-1/2 -translate-y-2/3 left-1/2">
-            <div class="lg:flex items-center justify-around p-10">
+            <div class=" lg:flex items-center justify-around p-10">
                 <div>
-                    <img src="c2-assets/vegetable-busket.png" alt="">
+                    <img class="mx-auto" src="c2-assets/vegetable-busket.png" alt="">
                 </div>
-                <div class="space-y-5">
+                <div class="space-y-5 text-center lg:text-left">
                     <h1 class="text-4xl">Get Grocery News!</h1>
                     <p>Exclusive training tips, ticks, product deals and more.</p>
                     <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" /> <br>
